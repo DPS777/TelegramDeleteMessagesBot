@@ -7,12 +7,6 @@ import asyncio
 
 CONFIG_FOLDER = 'config'
 
-class DeleteTypes(Enum):
-    ALL = 1
-    OLDEST_TO_NEWEST = 2
-    NEWEST_TO_OLDEST = 3
-    SPECIFIC = 4
-
 class TelegramBot:
     def __init__(self, api_id, api_hash, phone_number):
         self.api_id = api_id
