@@ -96,7 +96,6 @@ def remove_type_MessageService(array):
         if type(element).__name__ != 'Message':
             array.remove(element)
 
-
 async def choose_type_delete(bot, chat_id):
 
     while True:
@@ -110,6 +109,10 @@ async def choose_type_delete(bot, chat_id):
         print("7. Exit")
 
         choice = input("Enter your choice: ")
+
+        confirm = input("Are you sure? (y/N): ")
+        if confirm.lower() != 'y':
+            continue
 
         if choice == '1':
             message_ids = await bot.get_messages(chat_id, limit=None, reverse=False)
